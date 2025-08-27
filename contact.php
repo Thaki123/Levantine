@@ -1,0 +1,142 @@
+<?php include_once "head.php"; ?>
+<script>var page ="contact";</script>
+    <div class="bodyAll">
+        <?php include_once "menu.php"; ?>
+        <section class="headerSection">
+            
+            <?php include_once "header.php"; ?>
+            <div class="pageHeading wow fadeInUp" data-wow-delay=".4s">
+                <h1>CONTACT US</h1>
+            </div>
+
+            <div class="pageTitle wow fadeInUp" data-wow-delay=".6s">
+                <h2>our TEAM OF experts IS READY <br/>TO ANSWER ALL YOUR queries.</h2>
+            </div>
+
+            <div class="pageDots wow fadeInUp" data-wow-delay=".8s">...</div>
+        </section>
+
+        <section class="bodySection wow fadeInUp" data-wow-delay=".9s">
+            <div id="map" class="mapsDiv"></div>
+
+            <script>
+                function initMap() {
+                    var binery = {
+                        lat: 33.844441,
+                        lng: 35.4953809
+                    };
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 15,
+                        center: binery
+                    });
+                    var marker = new google.maps.Marker({
+                        position: binery,
+                        map: map
+                    });
+                }
+            </script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6OEFHhlvwdg9VGp01Ug8ini4OnU3R2PQ&callback=initMap">
+            </script>
+            <div class="contacts"> 
+                <div class="cntct">
+                    <div class="detailsDiv  wow fadeInUp" data-wow-delay=".3s">
+                        <div class="phoneDiv">
+                            <div class="icon"><i class="fa fa-fw fa-phone"></i></div>
+                            <div class="contDetails">
+                                <strong>T. </strong>+961 1 455 000
+                            </div>
+                            <div class="contDetails">
+                                <strong>F. </strong>+961 1 455 999
+                            </div>
+                        </div>
+                        <div class="locationDiv">
+                            <div class="icon"><i class="fa fa-fw fa-map-marker"></i></div>
+                            <div class="contDetails">
+                                Airport Highway, Baayno Building
+                            </div>
+                            <div class="contDetails">
+                                <strong>P.O.Box: </strong>11-8564 Beirut - Lebanon
+                            </div>
+                        </div>
+                        <div class="emailDiv">
+                            <div class="icon"><i class="fa fa-fw fa-envelope"></i></div>
+                            <div class="contDetails">
+                                <a style="color:#002453" href="mailto:info@levantine.org">info@levantine.org</a>
+                            </div>
+                            <div class="po">
+                                &nbsp;
+                            </div>
+                        </div>
+                        <br clear="all" />
+                    </div>
+
+                    <div class="hours wow fadeInUp" data-wow-delay=".6s">
+                        <div class="title">OFFICE HOURS</div>
+                        <div class="desc">Monday to Friday 8:00 am - 5:00 pm, Saturday 8:00 am - 1:00 pm</div>
+
+                    </div>
+                    <!--<a href="#" class="btn btn-sm animated-button thar-three">Our Process</a>-->
+
+                    <div class="contactForm wow fadeInUp" data-wow-delay=".8s">
+                        <form method="POST" action="#">
+                            <div class="formLeft">
+                                <div><input type="text" name="name" class="contactInput" placeholder="Full Name *" required/></div>
+                                <div><input type="email" name="email" class="contactInput" placeholder="Email Address *" required/></div>
+                                <div><input type="text" name="company" class="contactInput" placeholder="Company" /></div>
+                                <div><input type="text" name="pnum" class="contactInput" placeholder="Phone Number" /></div>
+                            </div>
+                            <div class="formRight">
+                                <div><input type="text" name="subject" class="contactInput" placeholder="Subject" /></div>
+                                <div><textarea name="message" placeholder="Message" class="contactInput"></textarea></div>
+                            </div>
+<br clear="all" />
+                            <div class="boxButton">
+                                <a type="submit" class="btn btn-sm animated-button thar-three swapedBoxButton">Get in Touch <span class="rightArrow">></span></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                </div>
+
+        </section>
+
+        <section class="footerSection">
+            <span class="copy">Copyright © 2017 Levantine Luxury Packaging. All rights reserved. </span>
+            <div class="social">
+                <a href="https://www.instagram.com/levantineluxurypackaging/" target="_blank"><img src="img/instagram.png" /></a>
+                <a href="https://www.facebook.com/levantineluxury/" target="_blank"><img src="img/facebook.png" /></a>
+            </div>
+        </section>
+        <a href="#top">
+            <div class="arrowUp">
+                <!--<i class="fa fa-angle-up" aria-hidden="true"></i>-->
+                <img src="img/btnUp.png" width="26" />
+            </div>
+        </a>
+    </div>
+
+    
+    
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+        /*.menuSection {top:5%;}*/
+        /*.headerSection { background-image: url("img/background-contact.png"); background-repeat: no-repeat;}*/
+        /*.cntct { background-image: url("img/background-contact-1.png"); background-repeat: no-repeat;}*/
+        .bodyAll {
+            /*margin: -20px auto;*/
+        }
+    </style>
+    <script>
+	$(document).ready(function() {
+
+		 setTimeout(function(){$(".headerSection").css({ "background-image": 'url("img/background-about-1.png")' }); }, 1400);   
+     });
+	 </script>
+     
+   
+</body>
+
+</html>

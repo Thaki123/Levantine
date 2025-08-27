@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJlf3dcbee53e48c5d9b8197cee5cad2229" />
+    <meta charset="utf-8">
+    <title>Levantine</title>
+    <meta name="generator" content="Google Web Designer 1.9.0.0619">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+		<script type="text/javascript" language="javascript" src="js/jquery.js"></script>
+        
+    <script>
+        var page = "index";
+    </script>
+<style>
+.divlay1, .divlay3, .divlay5, .divlay7{transform:translateY(-100%);}
+.divlay2, .divlay4, .divlay6, .divlay8{transform:translateY(100%);}
+</style>
+    <script>
+	var layerh;
+	var wH;
+        $(document).ready(function() {
+			wH = $(window).height();
+			
+           // setTimeout(function() {
+//                $(".headerTop").show();
+//            }, 5000);
+				
+				 // $( ".divlay1" ).animate({
+//						transform:" translateY(0)"
+//						
+//					  }, 1000, function() {
+//						// Animation complete.
+//				  });
+				  
+
+
+					/*$( ".divlay3" ).animate({
+						step: function(now,fx) {
+						  $(this).css('transform','translateY('+now+'%)'); 
+						},
+						duration:'slow'
+					},'linear');*/
+	
+	
+	
+			
+        });
+		$(window).load(function() {
+			layerh=$(".divlay").height(); //alert(layerh); 
+			//alert(wH);
+			var ratio=layerh*100/wH; 
+			if(ratio>70){ var val=(ratio-70)/1.3; 
+			//val=ratio; 
+				$(".t1").css({ "top": "-"+val+"%" }); 
+				$(".t2").css({ "bottom":"-"+val+"%" }); 
+			}
+			 $( ".divlay1" ).animate({top:layerh+"px" }, 1000, function() { });
+			$( ".divlay5" ).animate({top:layerh+"px" }, 1500, function() { });			
+						
+			setTimeout(function(){
+            	$( ".divlay3" ).animate({top:layerh+"px" }, 1000, function() { });
+				$( ".divlay7" ).animate({top:layerh+"px" }, 1500, function() { });		
+             }, 500);	
+			 
+			 $( ".divlay2" ).animate({bottom:layerh+"px" }, 1000, function() { });
+			$( ".divlay6" ).animate({bottom:layerh+"px" }, 1500, function() { });			
+						
+			setTimeout(function(){
+            	$( ".divlay8" ).animate({bottom:layerh+"px" }, 1000, function() { });
+				$( ".divlay4" ).animate({bottom:layerh+"px" }, 1500, function() { });		
+             }, 500); 
+				 
+			setTimeout(function(){
+				//$( ".set1" ).fadeOut();
+            	
+				$( ".set1" ).fadeOut( "slow", function() {
+					$( ".set2" ).fadeIn( "slow", function() {
+						$( ".set3" ).fadeIn( "slow", function() {
+							$( ".set4" ).fadeIn( "slow", function() {
+								$( ".set0" ).fadeIn( "slow", function() {
+						
+								});
+							});
+						});
+					});
+				});
+						
+             }, 2000);
+		});
+    </script>
+</head>
+
+<body class="htmlNoPages">
+    <?php include_once "menu.php"; ?>
+    <section class="headerSection set3">
+        <?php include_once "header.php"; ?>
+    </section>
+    <div class="mainhome" style="background-image:none;" var="bg should appear with animation">
+    	<div class="set0"></div>
+    	<div class="set1">
+            <div class="t1">
+                <div class="divlay divlay1"><img src="img/layer1.png" class="hlayers layer1" ></div>
+                <div class="divlay divlay3"><img src="img/layer3.png" class="hlayers layer3" ></div>
+                <div class="divlay divlay5"><img src="img/layer5.png" class="hlayers layer5" ></div>
+                <div class="divlay divlay7"><img src="img/layer7.png" class="hlayers layer7" ></div>
+                
+            </div>
+            <div class="t2">
+            	<div class="divlay divlay2"><img src="img/layer2.png" class="hlayers layer2" ></div>
+                <div class="divlay divlay4"><img src="img/layer4.png" class="hlayers layer4" ></div>
+                <div class="divlay divlay6"><img src="img/layer6.png" class="hlayers layer6" ></div>
+                <div class="divlay divlay8"><img src="img/layer8.png" class="hlayers layer8" ></div>
+            </div>
+        </div>
+    	<div class="set2">
+        	<div class="set2conti">
+                <div class="logoyos"><img src="img/logoyos.gif?v=<?=rand()?>" class="logoyosimg"></div>
+                
+                <div class="jemle set25">Luxury packaging solutions for<br> the most recognisable brands.</div>
+            </div>
+        </div>
+        
+        <div class="set4">
+         <?php //include_once "footer.php"; ?>
+        </div>
+    </div>
+    
+<script type="text/javascript " language="javascript " src="js/wow.js "></script>
+        <script type="text/javascript" language="javascript" src="js/manage.js"></script>
+</body>
+
+</html>

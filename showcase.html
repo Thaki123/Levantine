@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Levantine</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" language="javascript" src="js/jquery.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+</head>
+
+<body>
+    <div class="bodyAll">
+        <section class="headerSection">
+            <div class="headerTop">
+                <div class="logo">
+                    <img src="img/logo.png" title="Bshara El Khoury" alt="Bshara El Khoury logo" width="100%" />
+                </div>
+                <div class="menu">
+                    <div class="bars"></div>
+                    <div class="bars"></div>
+                    <div class="bars"></div>
+                </div>
+            </div>
+
+            <div class="pageHeading">
+                <h1>OUR SHOWCASE</h1>
+            </div>
+
+            <div class="pageTitle">
+                <h2>we inspire brands & bring their unique designs to life.</h2>
+            </div>
+
+            <div class="pageDots">...</div>
+        </section>
+        <!--style="background-color:#002453;"-->
+        <section class="bodySection">
+            <div class="masonry">
+
+                <div class="item">
+                    <a href="showcase-details.html?id=1">
+                        <img src="img/exotica-small.jpg" title="Exotica" alt="Exotica" />
+                        <div class="layer"></div>
+                        <div class="itemDetails">
+                            <div class="itemName">ANDREA WAZEN</div>
+                            <div class="itemTitle">Hard Cardboard Shoe Boxes</div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="item">
+                    <a href="showcase-details.html?id=1">
+                        <img src="img/haddad.jpg" title="Exotica" alt="Exotica" />
+                        <div class="layer"></div>
+                        <div class="itemDetails">
+                            <div class="itemName">ANDREA WAZEN</div>
+                            <div class="itemTitle">Hard Cardboard Shoe Boxes</div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="item">
+                    <a href="showcase-details.html?id=1">
+                        <img src="img/leather.jpg" title="Exotica" alt="Exotica" />
+                        <div class="itemDetails">
+                            <div class="itemName">ANDREA WAZEN</div>
+                            <div class="itemTitle">Hard Cardboard Shoe Boxes</div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="item">
+                    <a href="showcase-details.html?id=1">
+                        <img src="img/jewl.jpg" title="Exotica" alt="Exotica" />
+                        <div class="itemDetails">
+                            <div class="itemName">ANDREA WAZEN</div>
+                            <div class="itemTitle">Hard Cardboard Shoe Boxes</div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="item">
+                    <a href="showcase-details.html?id=1">
+                        <img src="img/sibline.jpg" title="Exotica" alt="Exotica" />
+                        <div class="itemDetails">
+                            <div class="itemName">ANDREA WAZEN</div>
+                            <div class="itemTitle">Hard Cardboard Shoe Boxes</div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="item">
+                    <a href="showcase-details.html?id=1">
+                        <img src="img/nemer-saade.jpg" title="Exotica" alt="Exotica" />
+                        <div class="itemDetails">
+                            <div class="itemName">ANDREA WAZEN</div>
+                            <div class="itemTitle">Hard Cardboard Shoe Boxes</div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="item">
+                    <a href="showcase-details.html?id=1">
+                        <img src="img/golden.jpg" title="Exotica" alt="Exotica" />
+                        <div class="itemDetails">
+                            <div class="itemName">ANDREA WAZEN</div>
+                            <div class="itemTitle">Hard Cardboard Shoe Boxes</div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="item">
+                    <a href="showcase-details.html?id=1">
+                        <img src="img/gray.jpg" title="Exotica" alt="Exotica" />
+
+                        <div class="itemDetails">
+                            <div class="itemName">ANDREA WAZEN</div>
+                            <div class="itemTitle">Hard Cardboard Shoe Boxes</div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="item">
+                    <a href="showcase-details.html?id=1">
+                        <img src="img/andera-wazen.jpg" title="Exotica" alt="Exotica" />
+                        <div class="itemDetails">
+                            <div class="itemName">ANDREA WAZEN</div>
+                            <div class="itemTitle">Hard Cardboard Shoe Boxes</div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="footerSection" style="margin:0;">Copyright © 2017 Levantine Luxury Packaging. All rights reserved. </section>
+    </div>
+    <script type="text/javascript" language="javascript" src="js/manage.js"></script>
+    <script>
+        $(document).ready(function() {
+            var width = $(window).width();
+            $(".masonry").css("column-count", "2");
+			if (width < 580) {
+                $(".masonry").css("column-count", "1");
+            }
+
+            $(".item").hover(function() {
+				$(this).find(".layer").fadeIn();
+                $(this).find(".itemDetails").fadeIn();
+            }, function() {
+                $(this).find(".itemDetails").hide();
+				$(this).find(".layer").hide();
+            });
+        });
+    </script>
+</body>
+
+</html>
