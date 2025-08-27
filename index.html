@@ -96,9 +96,9 @@
 </head>
 
 <body class="htmlNoPages">
-    <?php include_once "menu.php"; ?>
+    {% include menu.html %}
     <section class="headerSection set3">
-        <?php include_once "header.php"; ?>
+        {% include header.html %}
     </section>
     <div class="mainhome" style="background-image:none;" var="bg should appear with animation">
     	<div class="set0"></div>
@@ -119,14 +119,14 @@
         </div>
     	<div class="set2">
         	<div class="set2conti">
-                <div class="logoyos"><img src="img/logoyos.gif?v=<?=rand()?>" class="logoyosimg"></div>
+                <div class="logoyos"><img src="img/logoyos.gif?v={{ site.time | date: '%s' }}" class="logoyosimg"></div>
                 
                 <div class="jemle set25">Luxury packaging solutions for<br> the most recognisable brands.</div>
             </div>
         </div>
         
         <div class="set4">
-         <?php //include_once "footer.php"; ?>
+         
         </div>
     </div>
     
