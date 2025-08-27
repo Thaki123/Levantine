@@ -1,56 +1,40 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Levantine</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <script type="text/javascript" language="javascript" src="js/jquery.js"></script>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.css" />
-
-    <style>
+{% include head.html %}
+ 
+<script>var page ="showcase";</script>
+<style>
         .owl-theme .owl-nav.disabled+.owl-dots {
             position: absolute;
             bottom: 30px;
             right: 40px;
         }
+
+        .footerSection {margin:0;position: relative;}
+        #myCarousel, #myCarousel div {
+            height: 100%;
+        }
+
+        .owl-dots {height:20px !important;}
+        .bodySection {
+            height: calc(100% - 30px);
+        }
+        .details {
+            height: 100%;
+        }
+        .leftDetails, .rightDetails {
+            height: 100%;
+        }
+        .bodyAll {height:100%;}
+        .imageItem img { height:100%; }
+        .rightDetails {position:relative;}
+        .itemDots {display: block; font-size: 50px;}
     </style>
-</head>
-
-<body>
     <div class="bodyAll">
-        <section class="headerSection">
-            <div class="headerTop">
-                <div class="logo">
-                    <img src="img/logo.png" title="Bshara El Khoury" alt="Bshara El Khoury logo" width="100%" />
-                </div>
-                <div class="menu">
-                    <div class="bars"></div>
-                    <div class="bars"></div>
-                    <div class="bars"></div>
-                </div>
-            </div>
-
-            <div class="pageHeading">
-                <h1>OUR SHOWCASE</h1>
-            </div>
-
-            <div class="pageTitle">
-                <h2>we inspire brands & bring their unique designs to life.</h2>
-            </div>
-
-            <div class="pageDots">...</div>
-        </section>
         <!--style="background-color:#002453;"-->
         <section class="bodySection">
             <div class="details">
                 <div class="leftDetails">
-                    <div class="owl-carousel owl-theme">
+                    <div id="myCarousel" class="owl-carousel owl-theme">
+                                            <div class="owl-carousel owl-theme">
                         <div class="imageItem">
                             <img src="img/andrea-wazen-1.jpg" title="" alt="" width="70%" />
                         </div>
@@ -61,9 +45,11 @@
                             <img src="img/andrea-wazen-3.jpg" title="" alt="" width="70%" />
                         </div>
                     </div>
+
+                    </div>
                 </div>
                 <div class="rightDetails">
-                    <div class="itemName">ANDREA WAZEN</div>
+                                        <div class="itemName">ANDREA WAZEN</div>
                     <div class="itemTitle">Hard Cardboard Shoe Boxes</div>
                     <div class="itemDesc">Andrea Wazen is one of Lebanon's very first hand-made luxury footwear designers for women. Her shoe designs are super gorgeous, and the store is equally impressive.
                         <br/>
@@ -72,11 +58,21 @@
                     <div class="boxButton">
                         <a href="showcase.html" class="btn btn-sm animated-button thar-three swapedBoxButton">Back to Showcase</a>
                     </div>
+
+                    
+                    <div class="bottomShow">
+                        <div class="prev"><img src= "img/less.png" alt="<" width="8"/></div>
+                        <div class="boxButton">
+                            <a href="showcase.html" class="btn btn-sm animated-button thar-three swapedBoxButton">Back to Showcase</a>
+                        </div>
+                        <div class="next"><img src= "img/greater.png" alt=">" width="8"/></div>
+                    </div>
+                    
                 </div>
             </div>
         </section>
 
-        <section class="footerSection" style="margin:0;">Copyright © 2017 Levantine Luxury Packaging. All rights reserved. </section>
+        {% include footer.html %}
     </div>
     <script type="text/javascript" language="javascript" src="js/manage.js"></script>
     <script type="text/javascript " language="javascript " src="js/owl.carousel.js "></script>
@@ -87,10 +83,17 @@
                 lazyLoad: true,
                 loop: true,
                 margin: 10,
-                responsiveClass: true,
-                nav: false
-
+                responsiveClass: true
             });
+
+            var owl = $("#myCarousel");
+            $('.next').click(function() {
+                owl.trigger('next.owl.carousel');
+            });
+            $('.prev').click(function() {
+                owl.trigger('prev.owl.carousel');
+            });
+
         });
     </script>
 </body>
